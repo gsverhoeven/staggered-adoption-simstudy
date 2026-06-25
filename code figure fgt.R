@@ -29,6 +29,8 @@ if(scen == 'constant'){
 
 library(dplyr)
 library(tidyr)
+library(ggplot2)
+library(cowplot)
 
 g_values <- c(3, 4, 5)
 t_values <- 0:5
@@ -68,15 +70,15 @@ plot <- ggplot(df, aes(x = t, y = value, group = g)) +
 plot_grid(plot, align = "v", rel_heights = c(1))
 
 
-ggsave(
-  filename = "Results/Figures paper 2/fgt.pdf",
-  plot = plot,
-  device = "pdf",
-  width = 24, 
-  height = 20,
-  units = "in",
-  dpi = 300
-)
+# ggsave(
+#   filename = "Results/Figures paper 2/fgt.pdf",
+#   plot = plot,
+#   device = "pdf",
+#   width = 24, 
+#   height = 20,
+#   units = "in",
+#   dpi = 300
+# )
 
 
 
